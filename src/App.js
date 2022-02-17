@@ -11,6 +11,18 @@ import Img from "./Components/Img"
 import {baseUrl, apiKey, imgUrl} from './constants'
 import Paragraph from "./Components/Paragraph";
 
+import styled from "styled-components";
+
+const StyledBody = styled.div`
+
+div{
+  background-color: ${props => props.theme.lightpink}
+}
+
+
+
+`
+
 function App() {
 
   const [title, setTitle] = useState('')
@@ -36,7 +48,7 @@ useEffect(()=>{
 
 
   return (
-    <div className="App">
+    <StyledBody className="App">
       
 
       <Title title = {title}/>
@@ -44,7 +56,7 @@ useEffect(()=>{
       <Img imgUrl = {imgUrl}/>
       <Paragraph explanation = {explanation}/>
      
-    </div>
+    </StyledBody>
   );
 }
 
